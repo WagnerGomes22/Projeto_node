@@ -1,0 +1,25 @@
+{
+  "name": "job_finder",
+  "version": "1.0.0",
+  "description": "Este é um portal para prgramadores encontrarem vagas de trabalho, ou adicionar uma.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemons app.js"
+  },
+  "keywords": [
+    "dev",
+    "job"
+  ],
+  "author": "Wagner",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
