@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+h1 #main-tittle{
+    color: black;
+}
+
+/* nav */
+.navbar{
+    padding: 1 rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.navbar .nav-item a {
+    color: #212529;
+}
+.nav-item{
+    margin: 0 10px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 10px 25px;
+    font-weight: bold;
+}
+
+.navbar .nav-item .btn{
+    color:#fff;
+    background-color: #f03e3e;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.nav-link.btn.btn-primary:hover{
+    background-color: #fff;
+    color: #f03e3e;
+    border-color: #f03e3e;
+}
+
+/* banner */
+
+#top-container{
+    padding: 110px;
+    background-color: #f7f9fc;
+    border-bottom: 4px solid #013068;
+    border-bottom: 30px;
+    background-image: url("../img/banner2.png");
+    background-position: 0px;
+    background-size: cover;
+    color: #fff;
+}
+
+#main-title{
+    padding:  30px 0;
+    font-size: 3rem;
+}
+
+#main-subtitle{
+    padding-bottom: 80px;
+    font-size: 1rem;
+}
+
+/* form */
+#search-form{
+    padding: 30px 100px;
+}
+#search-form .col-md-10, #search-form  .col-md-2{
+    padding: 0;
+}
+
+#search-form input, #search-form button {
+    width: 100%;
+    border-radius: 0;
+    height: 50px;
+    font-size: 18px;
+}
