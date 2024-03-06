@@ -1,5 +1,7 @@
 const express    = require('express')
+const exphbs     = require ('express-handlebars');
 const app        = express();
+const path       = require('path')
 const db         = require('./db/connection');
 const bodyParser = require ('body-parser');
 
@@ -13,8 +15,18 @@ app.listen(port, function() {
 
 app.use(bodyParser.urlencoded({extended: false }));
 
-// conexão do banco quando ela for iniciada(Teste)
+// Handlebars
+app.set('views', path.join(__dirname, 'views'));
+app.engine('handlebars', exphbs.engine({defaultLayout: 'layout/main'}));
+app.set('view engine', 'handlebars');
+
+
+// static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+
 // db connections
+// conexão do banco quando ela for iniciada(Teste)
 db
 .authenticate()
 .then(() => {
@@ -26,7 +38,8 @@ db
 
 // ROUTES
 app.get('/',(req, res) => {
-    res.end("Esta funcionando");
+    // renderização do index na pagina index.handlebars
+    res.render("index");
 });
 
 // jobs routes

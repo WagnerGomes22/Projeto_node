@@ -1,14 +1,16 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;1,200;1,300&family=Open+Sans:wght@300;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
+
+* {
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
 }
 
-h1 #main-tittle{
+h1 #main-tittle {
     color: black;
 }
 
 /* nav */
-.navbar{
+.navbar {
     padding: 1 rem;
     border-bottom: 1px solid #ccc;
 }
@@ -16,23 +18,27 @@ h1 #main-tittle{
 .navbar .nav-item a {
     color: #212529;
 }
-.nav-item{
+
+.nav-item {
     margin: 0 10px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link{
+.navbar-expand-lg .navbar-nav .nav-link {
     padding: 10px 25px;
     font-weight: bold;
 }
 
-.navbar .nav-item .btn{
-    color:#fff;
+.navbar .nav-item .btn {
+    color: #fff;
     background-color: #f03e3e;
     border: 1px solid transparent;
     border-radius: 10px;
 }
 
-.nav-link.btn.btn-primary:hover{
+.nav-link.btn.btn-primary:hover,
+#search-form button:hover,
+.list-group-item a:hover,
+#form-box button:hover {
     background-color: #fff;
     color: #f03e3e;
     border-color: #f03e3e;
@@ -40,7 +46,7 @@ h1 #main-tittle{
 
 /* banner */
 
-#top-container{
+#top-container {
     padding: 110px;
     background-color: #f7f9fc;
     border-bottom: 4px solid #013068;
@@ -51,27 +57,154 @@ h1 #main-tittle{
     color: #fff;
 }
 
-#main-title{
-    padding:  30px 0;
+#main-title {
+    padding: 30px 0;
     font-size: 3rem;
 }
 
-#main-subtitle{
+#main-subtitle {
     padding-bottom: 80px;
     font-size: 1rem;
 }
 
 /* form */
-#search-form{
+#search-form {
     padding: 30px 100px;
 }
-#search-form .col-md-10, #search-form  .col-md-2{
+
+#search-form .col-md-10,
+#search-form .col-md-2 {
     padding: 0;
 }
 
-#search-form input, #search-form button {
+#search-form input,
+#search-form button {
     width: 100%;
     border-radius: 0;
     height: 50px;
     font-size: 18px;
+}
+
+#search-form button {
+    color: #fff;
+    background-color: #f03e3e;
+    border: 1px solid transparent;
+}
+
+#jobs-container {
+    padding: 0 100px;
+    padding-bottom: 50px;
+}
+
+#job-list .list-group-item {
+    margin-bottom: 9px;
+    border: 1px solid #ccc;
+    padding: 15px 80px;
+    color: #212529;
+    height: 120px;
+}
+
+#job-list .list-group-item p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#job-list .list-group-item.new-job {
+    border: none;
+    background-color: #fff7cc;
+}
+
+#job-list-title {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.list-group-item img {
+    width: 80px;
+    border: 1px solid #212529;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    left: -40px;
+    top: calc(50% - 40%);
+}
+
+.list-group-item a {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    height: 50px;
+    background-color: #f03e3e;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    padding-top: 12px;
+}
+
+.new-job-label {
+    background-color: #ffd500;
+    color: #4d5154;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    right: 250px;
+    top: 40px;
+    display: none;
+    border-radius: 10px;
+}
+
+.new-job .new-job-label {
+    display: block;
+}
+
+/* add page  */
+
+#add-form-container {
+    margin-top: 100px;
+}
+
+#add-form-container h1 {
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+#form-box {
+    padding: 3;
+    box-shadow:0 1px 5px rgba(0,0,0,.15);
+    border-radius: 4px;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+#add-form-container h2 {
+    color: #f03e3e;
+    font-weight: 200;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 5px;
+
+}
+
+#add-form-container form label {
+    font-weight: bold;
+}
+
+#add-form-container form input,
+#add-form-container form textarea {
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+#form-box button {
+    height: 50px;
+    width: 200px;
+    background-color: #f03e3e;
+    border: 1px solid transparent;
+    border-radius: 0;
+    margin-top: 20px;
+
 }
