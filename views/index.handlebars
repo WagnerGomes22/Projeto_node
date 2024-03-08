@@ -18,35 +18,16 @@
                 <div class="col-md-12">
                     <h2 id="job-list-title">Nossas vagas em destaques</h2>
                     <ul id="job-list" class="list-group">
+                        {{#each jobs}}
                         <li class="list-group-item new-job">
                             <img src="/img/img-empresa.png" alt="company">
-                            <p>Empresa</p>
-                            <h2>Titulo da empresa</h2>
-                            <p>R$200,00</p>
+                            <p>{{dataValues.company}}</p>
+                            <h2>{{dataValues.title}}</h2>
+                            <p>{{dataValues.salary}}</p>
                             <span class="new-job-label">Nova</span>
                             <a class="btn btn-primary">Ver vagas</a>
                         </li>
-                        <li class="list-group-item">
-                            <img src="/img/img-empresa.png" alt="company">
-                            <p>Empresa</p>
-                            <h2>Titulo da empresa</h2>
-                            <p>R$200,00</p>
-                            <a class="btn btn-primary">Ver vagas</a>
-                        </li>
-                        <li class="list-group-item">
-                            <img src="/img/img-empresa.png" alt="company">
-                            <p>Empresa</p>
-                            <h2>Titulo da empresa</h2>
-                            <p>R$200,00</p>
-                            <a class="btn btn-primary">Ver vagas</a>
-                        </li>
-                        <li class="list-group-item">
-                            <img src="/img/img-empresa.png" alt="company">
-                            <p>Empresa</p>
-                            <h2>Titulo da empresa</h2>
-                            <p>R$200,00</p>
-                            <a class="btn btn-primary">Ver vagas</a>
-                        </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>

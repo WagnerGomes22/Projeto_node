@@ -4,6 +4,7 @@ const app        = express();
 const path       = require('path')
 const db         = require('./db/connection');
 const bodyParser = require ('body-parser');
+const job = require('./models/jobs');
 
 const port = 3000;
 
@@ -13,11 +14,11 @@ app.listen(port, function() {
 });
 // body parser
 
-app.use(bodyParser.urlencoded({extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Handlebars
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs.engine({defaultLayout: 'layout/main'}));
+app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 
@@ -38,8 +39,19 @@ db
 
 // ROUTES
 app.get('/',(req, res) => {
-    // renderização do index na pagina index.handlebars
-    res.render("index");
+    
+    job.findAll({order: [ //ordenando por data de criação 
+        ['createdAt', 'DESC']
+    ]})
+    .then(jobs => {
+
+        res.render("index" ,{ // renderização do index na pagina index.handlebars
+            jobs
+        }); 
+       
+    });
+        
+    
 });
 
 // jobs routes

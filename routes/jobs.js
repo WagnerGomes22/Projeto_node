@@ -2,9 +2,14 @@ const express = require('express');
 const router = express.Router(); // obejto de rotas do express
 const job = require('../models/jobs');
 
+
 // rota de teste 
 router.get('/test', (req, res) => {
     res.send("deu certo");
+});
+
+router.get('/add', (req, res) => {
+    res.render('add');
 });
 
 
@@ -26,7 +31,7 @@ router.post('/add', (req, res) => {
     })
         .then(() => res.redirect('/'))
         .catch(err => console.log(err));
-              
+
 });
 
 module.exports = router
