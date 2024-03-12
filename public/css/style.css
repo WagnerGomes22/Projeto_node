@@ -11,8 +11,8 @@ h1 #main-tittle {
 
 /* nav */
 .navbar {
-    padding: 1 rem;
-    border-bottom: 1px solid #ccc;
+    padding: 1rem;
+    border-bottom: 1px solid #0e0d0d;
 }
 
 .navbar .nav-item a {
@@ -35,6 +35,7 @@ h1 #main-tittle {
     border-radius: 10px;
 }
 
+
 .nav-link.btn.btn-primary:hover,
 #search-form button:hover,
 .list-group-item a:hover,
@@ -51,7 +52,7 @@ h1 #main-tittle {
     background-color: #f7f9fc;
     border-bottom: 4px solid #013068;
     border-bottom: 30px;
-    background-image: url("../img/banner2.png");
+    background-image: url("../img/depositphotos_360736050-stock-photo-close-business-woman-hands-stirring.jpg");
     background-position: 0px;
     background-size: cover;
     color: #fff;
@@ -81,9 +82,22 @@ h1 #main-tittle {
 #search-form input,
 #search-form button {
     width: 100%;
-    border-radius: 0;
+    border-radius: none;
     height: 50px;
     font-size: 18px;
+}
+
+#search-form input {
+    background-color: #ccc;
+}
+#search-form ::placeholder {
+    color: #4d5154;
+}
+
+#search-form input:focus, select:focus, textarea:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 
 #search-form button {
@@ -172,9 +186,10 @@ h1 #main-tittle {
     font-weight: 300;
 }
 
+
 #form-box {
     padding: 3;
-    box-shadow:0 1px 5px rgba(0,0,0,.15);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .15);
     border-radius: 4px;
     background-color: #fff;
     margin-bottom: 50px;
