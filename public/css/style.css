@@ -88,13 +88,16 @@ h1 #main-tittle {
 }
 
 #search-form input {
-    background-color: #ccc;
+    background-color: #fff;
 }
-#search-form ::placeholder {
+
+#search-form::placeholder {
     color: #4d5154;
 }
 
-#search-form input:focus, select:focus, textarea:focus{
+#search-form input:focus,
+select:focus,
+textarea:focus {
     box-shadow: 0 0 0 0;
     border: 0 none;
     outline: 0;
@@ -102,6 +105,7 @@ h1 #main-tittle {
 
 #search-form button {
     color: #fff;
+    font-weight: bold;
     background-color: #f03e3e;
     border: 1px solid transparent;
 }
@@ -134,6 +138,7 @@ h1 #main-tittle {
     margin-bottom: 35px;
     text-align: center;
     font-family: 'Poppins';
+    font-weight: 300;
 }
 
 .list-group-item img {
@@ -224,3 +229,124 @@ h1 #main-tittle {
     margin-top: 20px;
 
 }
+
+/* job-view */
+#job-view-container {
+    margin-top: 100px;
+}
+
+#job-view-container h1 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #212529;
+}
+
+#img-container img {
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid #212529;
+}
+
+.job-desc {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.main-color {
+    color: #f03e3e;
+}
+
+.back-link {
+    border: 1px solid #f03e3e;
+    padding: 5px 10px;
+    transition: .5s;
+}
+
+.back-link:hover {
+    background-color: #f03e3e;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* responsivo(mobile) */
+
+@media(max-width: 481px){
+    #navbarNav {
+        text-align: center;
+    }
+
+    /* home  */
+    #top-container{
+        padding: 50px;
+        padding-top: 100px;
+    }
+    #main-title{
+        font-size: 1.5rem;
+    }
+
+    #search-form {
+        padding: 0;
+    }
+
+    #jobs-container{
+        padding: 20px;
+    }
+
+    .list-group-item{
+        padding: 15 86px;
+    }
+
+    .list-group-item h2 {
+        font-size: 1.2rem;
+        width: 80%;
+    }
+
+    .list-group-item img {
+        width: 50px;
+        left: 15px;
+        top: calc(50% - 25px);
+
+    }
+
+    .new-job .new-job-label{
+        display: none;
+    }
+
+    /* job view */
+    .back-link{
+        margin-left: 30px;
+    }
+
+    #job-view-contaier p {
+        font-size: 1.3rem;
+    }
+
+    .job-desc{
+        width: 80%;
+    }
+
+    /* add view */
+
+    #form-box{
+        padding: 20px;
+    }
+
+    #add-form-container h1 {
+        font-size: 2rem;
+    }
+    
+    #form-box h2{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    #form-box button{
+        width: 100%;
+    }
+}
+
